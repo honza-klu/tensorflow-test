@@ -1,4 +1,4 @@
 matplotlib
 numpy
 jupyter
-tensorflow
+tensorflow-gpu
