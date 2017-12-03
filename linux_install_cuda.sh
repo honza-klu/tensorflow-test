@@ -1,5 +1,6 @@
 ID=$RANDOM
 TMP_PATH="/tmp/${ID}/"
+echo $TMP_PATH
 mkdir $TMP_PATH
 sudo apt-get -y install build-essential
 
@@ -15,13 +16,13 @@ sudo apt-get update
 sudo apt-get -y install cuda-8-0
 
 #wget klusacek.tk/~honza/data_archive/cudnn-8.0-linux-x64-v7.tgz
-wget -P $TMP_PATH klusacek.tk/~honza/data_archive/cudnn-8.0-linux-x64-v6.0.tgz -C ${TMP_PATH}
+wget -P $TMP_PATH klusacek.tk/~honza/data_archive/cudnn-8.0-linux-x64-v6.0.tgz
 tar -zxf ${TMP_PATH}cudnn-8.0-linux-x64-v6.0.tgz -C ${TMP_PATH}
 
 sudo mkdir -p /usr/local/cuda/lib64/
 sudo mkdir -p /usr/local/cuda/include/
-sudo cp ${TMP_PATH}/cuda/lib64/* /usr/local/cuda/lib64/
-sudo cp ${TMP_PATH}/cuda/include/* /usr/local/cuda/include/
+echo sudo cp ${TMP_PATH}cuda/lib64/* /usr/local/cuda/lib64/
+echo sudo cp ${TMP_PATH}cuda/include/* /usr/local/cuda/include/
 # CUDA Toolkit
 echo "export CUDA_HOME=/usr/local/cuda-8.0" >> ~/.bashrc
 echo "export LD_LIBRARY_PATH=${CUDA_HOME}/lib64:$LD_LIBRARY_PATH" >> ~/.bashrc
