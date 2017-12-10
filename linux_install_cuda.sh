@@ -21,11 +21,14 @@ tar -zxf ${TMP_PATH}cudnn-8.0-linux-x64-v6.0.tgz -C ${TMP_PATH}
 
 sudo mkdir -p /usr/local/cuda/lib64/
 sudo mkdir -p /usr/local/cuda/include/
-echo sudo cp ${TMP_PATH}cuda/lib64/* /usr/local/cuda/lib64/
-echo sudo cp ${TMP_PATH}cuda/include/* /usr/local/cuda/include/
+sudo cp ${TMP_PATH}cuda/lib64/* /usr/local/cuda/lib64/
+sudo cp ${TMP_PATH}cuda/include/* /usr/local/cuda/include/
 # CUDA Toolkit
+export CUDA_HOME=/usr/local/cuda-8.0
 echo "export CUDA_HOME=/usr/local/cuda-8.0" >> ~/.bashrc
+export LD_LIBRARY_PATH=${CUDA_HOME}/lib64:$LD_LIBRARY_PATH
 echo "export LD_LIBRARY_PATH=${CUDA_HOME}/lib64:$LD_LIBRARY_PATH" >> ~/.bashrc
+export PATH=${CUDA_HOME}/bin:${PATH}
 echo "export PATH=${CUDA_HOME}/bin:${PATH}" >> ~/.bashrc
 
 #configure right speed
