@@ -4,6 +4,8 @@ ID=$RANDOM
 TMP_PATH="/tmp/${ID}/"
 echo $TMP_PATH
 mkdir $TMP_PATH
+
+sudo apt-get -y update
 sudo apt-get -y install build-essential
 
 #wget https://developer.nvidia.com/compute/cuda/9.0/Prod/local_installers/cuda-repo-ubuntu1604-9-0-local_9.0.176-1_amd64-deb
