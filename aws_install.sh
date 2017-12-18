@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 echo "INIT STARTED"
 
 #instal application as ordinary user to his home directory

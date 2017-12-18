@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 ID=$RANDOM
 TMP_PATH="/tmp/${ID}/"
