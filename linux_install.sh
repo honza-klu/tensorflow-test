@@ -14,3 +14,4 @@ if ! lspci | grep -i nvidia; then
   . ./linux_install_cuda.sh
 else
   echo "NVIDIA card not found. Skipping cuda drivers."
+fi
