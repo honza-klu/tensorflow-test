@@ -14,10 +14,3 @@ EOF
 
 uptime
 echo "INIT COMPLETE"
-
-
-
-sudo -u ubuntu /bin/bash << EOF
-whoami
-echo $HOME
-EOF
